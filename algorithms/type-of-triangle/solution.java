@@ -1,17 +1,20 @@
 class Solution {
-    public int differenceOfSums(int n, int m) {
-        int num1 = 0;
-        int num2 = 0;
-        for(int i = 0; i <= n; i++) {
-            if(i % m == 0) {
-                num2 += i;
-            }
+    public String triangleType(int[] nums) {
+
+        if (nums[0] + nums[1] <= nums[2] ||
+            nums[0] + nums[2] <= nums[1] ||
+            nums[1] + nums[2] <= nums[0]) {
+            return "none";
         }
-        for(int i = 0; i <= n; i++) {
-            if(i % m != 0) {
-                num1 += i;
-            }
+
+        if (nums[0] == nums[1] && nums[1] == nums[2]) {
+            return "equilateral";
         }
-        return num1 - num2;
+
+        if (nums[0] == nums[1] || nums[1] == nums[2] || nums[0] == nums[2]) {
+            return "isosceles";
+        }
+
+        return "scalene";
     }
 }
