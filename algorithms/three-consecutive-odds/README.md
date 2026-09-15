@@ -1,6 +1,6 @@
 # Three Consecutive Odds
 
-**Difficulty:** Easy
+**Difficulty:** Unknown
 
 **Language:** Java
 
